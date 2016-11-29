@@ -19,14 +19,14 @@ var ros = new ROSLIB.Ros({
 // ----------------------
 var navSatFixListener = new ROSLIB.Topic({
     ros: ros,
-    name: 'drdre/gps_fix', //topic name
+    name: '/mavros/global_position/global', //topic name
     messageType: 'sensor_msgs/NavSatFix' //message Type
 });
 
-var magneticFieldListener = new ROSLIB.Topic({
+var headingListener = new ROSLIB.Topic({
     ros: ros,
-    name: 'drdre/magnetometer', //topic name
-    messageType: 'sensor_msgs/MagneticField' //message Type
+    name: '/mavros/global_position/compass_hdg', //topic name
+    messageType: 'std_msgs/Float64' //message Type
 });
 
 navSatFixListener.subscribe(function(message) {
@@ -80,8 +80,8 @@ navSatFixListener.subscribe(function(message) {
 
 });
 
-magneticFieldListener.subscribe(function(message) {
+headingListener.subscribe(function(message) {
     if (initOk == true) {
-        headingDegrees = Math.atan2(message.magnetic_field.y, message.magnetic_field.x) * 180 / Math.PI;
+        headingDegrees = message.data;
     }
 });
