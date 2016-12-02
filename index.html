@@ -15,7 +15,7 @@
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9hryzNjBkGyN3EwVmZlOWCTv-c0gyng4">
 	</script>
 
-<title> - Rendezvous - </title>
+<title> TeamMEGA </title>
 
 <!-- JQUERY -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -38,7 +38,7 @@
 <!-- /ROS JS -->
 
 <!-- BUTTONS FUNCTIONS -->
-<script src="js/btn_function.js"></script>
+<!--<script src="js/btn_function.js"></script>-->
 <!-- /BUTTONS FUNCTIONS -->
 
 </head>
@@ -50,7 +50,7 @@
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 			</button>
-			<a class="navbar-brand" href="#">RendezVous</a>
+			<a class="navbar-brand" href="#">TeamMEGA</a>
 		</div>
 
 		<div class="collapse navbar-collapse" id="navbar-collapse-3">
@@ -76,16 +76,16 @@
 	</nav>
 
 	<div class="row">
-	<p>
+
 	        <div class="col-md-12">
 		<!-- map -->	
 		<script src="js/map_init_gmaps.js"></script>
 		<!-- /map -->
 		<div id="map-canvas" class='map' ></div>
 		        </div>
-	</p>
+
 	</div>
-</div>
+
 
 <div class="container">
 		<div class="row">
@@ -95,19 +95,22 @@
 						<span class="glyphicon glyphicon-send"></span> Send Obstacle
 					</button>
 
-					<button type="button" class="btn btn-default" onclick="goalsnapshot()">
-						<span class="glyphicon glyphicon-send"></span> Send Goal
+					<button type="button" class="btn btn-default" onclick="goal1snapshot()">
+						<span class="glyphicon glyphicon-send"></span> Send Goal 1
+					</button>
+					<button type="button" class="btn btn-default" onclick="goal2snapshot()">
+						<span class="glyphicon glyphicon-send"></span> Send Goal 2
 					</button>
 
-					<button type="button" class="btn btn-success" onclick="f_btnCallbackStart()">
+					<button type="button" class="btn btn-success" onclick="">
 						<span class="glyphicon glyphicon-play"></span> START
 					</button>
 
-					<button type="button" class="btn btn-warning" onclick="f_btnCallbackWarning()">
+					<button type="button" class="btn btn-warning" onclick="">
 						<span class="glyphicon glyphicon-pause"></span> PAUSE
 					</button>
 
-					<button type="button" class="btn btn-danger" onclick="f_btnCallbackStop()">
+					<button type="button" class="btn btn-danger" onclick="">
 						<span class="glyphicon glyphicon-stop"></span> STOP
 					</button>
 
@@ -115,7 +118,6 @@
 		</div>
 
 	<div class="row">
-	Hi !
 	</div>
 </div>
 
@@ -124,7 +126,7 @@
 <!-- jQuery and JavaScript plugins -->
 <script src="http://code.jquery.com/jquery.js"></script>
 <!--script src="js/bootstrap.min.js"></script-->
-<script type="text/javascript" src="js/btn_function.js"></script>
+<!--<script type="text/javascript" src="js/btn_function.js"></script>-->
 <!-- LISTENER.JS -->
 <script type="text/javascript" src="js/subscriber_ros_gui.js"></script>
 <!-- PUBLISHER.JS -->

@@ -37,11 +37,11 @@
   obstaclePub.publish(pt);
 }
    
-   function goalsnapshot() {
+   function goal1snapshot() {
    
-     var goalPub = new ROSLIB.Topic({
+     var goal1Pub = new ROSLIB.Topic({
     ros : ros,
-    name : '/gui/goal',
+    name : '/gui/goal1',
     messageType : 'geometry_msgs/Point'
   });
 
@@ -51,5 +51,22 @@
       z : 0
 
   });
-  goalPub.publish(pt);
+  goal1Pub.publish(pt);
+   }
+   
+      function goal2snapshot() {
+   
+     var goal2Pub = new ROSLIB.Topic({
+    ros : ros,
+    name : '/gui/goal2',
+    messageType : 'geometry_msgs/Point'
+  });
+
+  var pt = new ROSLIB.Message({
+      x : Latitude,
+      y : Longitude,
+      z : 0
+
+  });
+  goal2Pub.publish(pt);
    }
