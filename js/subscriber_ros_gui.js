@@ -29,6 +29,10 @@ var headingListener = new ROSLIB.Topic({
     messageType: 'std_msgs/Float64' //message Type
 });
 
+
+
+
+
 navSatFixListener.subscribe(function(message) {
 
     if (index == 0) { // firts entry

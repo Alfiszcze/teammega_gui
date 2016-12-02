@@ -1,22 +1,28 @@
 //Customize the functions based on your needs
-function f_btnCallback1()
+function Send_Obstacle()
 {
-
+Lat = Latitude
+Long = Longitude
+obstaclesnapshot()
 }
 
-function f_btnCallback2()
+function Send_Goal()
 {	
-
+Lat = Latitude
+Long = Longitude
+goalsnapshot()
 }
 
 function f_btnCallback3()
 {
-
+Lat = Latitude
+Long = Longitude
 }
 
 function f_btnCallback4()
 {
-
+Lat = Latitude
+Long = Longitude
 }
 
 function f_btnCallbackStart()

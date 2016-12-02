@@ -5,6 +5,9 @@ var oldCurrentPosition = Array();
 var arrowAngle = 0;
 var arrowIcon;
 
+var Latitude = 0;
+var Longitude = 0;
+
 function initialize() {
     var starting = new google.maps.LatLng(47.413157, 8.548645); //Zurich
 
@@ -16,6 +19,16 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     map.setTilt(0); //disable 45° view
+    
+    
+    
+    google.maps.event.addListener(map, 'click', function(event) {   
+         
+        Latitude = event.latLng.lat()
+        Longitude = event.latLng.lng()
+        alert( 'Latitude: ' + event.latLng.lat() + ' and Longitude is: ' + event.latLng.lng() );
+    })
+    
 
 }
 
